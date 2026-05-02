@@ -1,0 +1,22 @@
+name: Build Mauricio FC
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        run: ./waf configure --board MambaF405v2_Mauricio
+
+      - name: Build Copter
+        run: ./waf copter
+
+      - name: Upload APJ
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: build/MambaF405v2_Mauricio/bin/arducopter.apj
