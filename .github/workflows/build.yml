@@ -22,9 +22,9 @@ jobs:
         run: |
           git submodule update --init --recursive
 
-      - name: Build bootloader
+      - name: Copy bootloader
         run: |
-          ./Tools/scripts/build_bootloaders.py MambaF405v2_Mauricio
+          cp Tools/bootloaders/MambaF405v2_bl.bin Tools/bootloaders/MambaF405v2_Mauricio_bl.bin
 
       - name: Configure
         run: |
@@ -34,7 +34,7 @@ jobs:
         run: |
           ./waf copter
 
-      - name: Upload
+      - name: Upload firmware
         uses: actions/upload-artifact@v4
         with:
           name: firmware
