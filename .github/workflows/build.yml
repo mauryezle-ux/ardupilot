@@ -8,10 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Copter stable
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: Copter-4.6.3
           submodules: recursive
 
       - name: Install dependencies
