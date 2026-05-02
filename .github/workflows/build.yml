@@ -18,9 +18,13 @@ jobs:
           sudo apt update
           sudo apt install -y python3 python3-pip python3-dev gcc-arm-none-eabi g++ make
 
-      - name: Init submodules (fix)
+   - name: Init submodules
         run: |
           git submodule update --init --recursive
+
+      - name: Build bootloader
+        run: |
+          ./Tools/scripts/build_bootloaders.py MambaF405v2_Mauricio
 
       - name: Configure
         run: |
