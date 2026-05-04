@@ -50,7 +50,6 @@ define DEFAULT_SERIAL1_PROTOCOL SerialProtocol_RCIN
 
 # USART3 RX only for SRXL2 / RC input
 PB11 USART3_RX USART3
-define DEFAULT_SERIAL3_PROTOCOL SerialProtocol_None
 
 # Seriales vacíos
 define DEFAULT_SERIAL2_PROTOCOL SerialProtocol_None
