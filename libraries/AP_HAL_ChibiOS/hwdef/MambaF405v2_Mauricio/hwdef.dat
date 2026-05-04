@@ -77,7 +77,7 @@ PB1  TIM3_CH4 TIM3 PWM(1) GPIO(52) BIDIR   # Motor 1
 PB0  TIM3_CH3 TIM3 PWM(2) GPIO(51)         # Motor 2
 
 PA2  TIM9_CH1 TIM9 PWM(3) GPIO(53) NODMA   # Servo 1
-PB11 TIM2_CH4 TIM2 PWM(4) GPIO(54)         # Servo 2
+PA3 TIM2_CH4 TIM2 PWM(4) GPIO(54)         # Servo 2
 PB10 TIM2_CH3 TIM2 PWM(5) GPIO(55)         # Servo 3
 
 # ================= LED =================
