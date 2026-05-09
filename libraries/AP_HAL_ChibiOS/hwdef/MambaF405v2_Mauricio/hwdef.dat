@@ -71,7 +71,7 @@ PB0  TIM3_CH3 TIM3 PWM(2) GPIO(51)         # Motor 2
 
 PA2  TIM9_CH1 TIM9 PWM(3) GPIO(53) NODMA   # Servo 1
 PA3 TIM2_CH4 TIM2 PWM(4) GPIO(54)         # Servo 2
-PA8 TIM4_CH3 TIM4 PWM(5) GPIO(80)         # Servo 3
+PA8 TIM2_CH3 TIM2 PWM(5) GPIO(80)         # Servo 3
 
 # ================= LED =================
 define AP_NOTIFY_GPIO_LED_2_ENABLED 1
