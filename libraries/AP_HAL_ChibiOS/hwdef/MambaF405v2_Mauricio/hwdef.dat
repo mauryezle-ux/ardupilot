@@ -31,7 +31,7 @@ define CH_CFG_ST_RESOLUTION 16
 
 # ================= BUSES =================
 I2C_ORDER I2C1
-SERIAL_ORDER OTG1 USART1 EMPTY USART3 EMPTY EMPTY USART6
+SERIAL_ORDER OTG1 EMPTY EMPTY USART3 EMPTY EMPTY USART6
 
 # ================= USB =================
 PA11 OTG_FS_DM OTG1
@@ -39,12 +39,7 @@ PA12 OTG_FS_DP OTG1
 PC5 VBUS INPUT OPENDRAIN
 
 # ================= RC INPUT =================
-# USART1 is wired to SBUS and PPM input
-# RC input defaults to timer capture
 
-# Alt config to allow RCIN on UART
-PA10 USART1_RX USART1
-define DEFAULT_SERIAL1_PROTOCOL SerialProtocol_RCIN
 
 # USART3 RX only for SRXL2 / RC input
 PB11 USART3_RX USART3
@@ -76,7 +71,7 @@ PB0  TIM3_CH3 TIM3 PWM(2) GPIO(51)         # Motor 2
 
 PA2  TIM9_CH1 TIM9 PWM(3) GPIO(53) NODMA   # Servo 1
 PA3 TIM2_CH4 TIM2 PWM(4) GPIO(54)         # Servo 2
-PA9 TIM9_CH3 TIM9 PWM(5) GPIO(55)         # Servo 3
+PA9 TIM4_CH3 TIM4 PWM(5) GPIO(55)         # Servo 3
 
 # ================= LED =================
 define AP_NOTIFY_GPIO_LED_2_ENABLED 1
