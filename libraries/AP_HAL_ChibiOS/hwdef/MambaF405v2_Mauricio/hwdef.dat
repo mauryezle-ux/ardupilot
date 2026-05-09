@@ -71,7 +71,7 @@ PB0  TIM3_CH3 TIM3 PWM(2) GPIO(51)         # Motor 2
 
 PA2  TIM9_CH1 TIM9 PWM(3) GPIO(53) NODMA   # Servo 1
 PA3 TIM2_CH4 TIM2 PWM(4) GPIO(54)         # Servo 2
-PA8 TIM2_CH3 TIM2 PWM(5) GPIO(55)         # Servo 3
+PA8  TIM1_CH1 TIM1 PWM(5) GPIO(55) NODMA   # Servo 3
 
 # ================= LED =================
 define AP_NOTIFY_GPIO_LED_2_ENABLED 1
@@ -128,4 +128,4 @@ define HAL_BATT_MONITOR_DEFAULT 4
 define BOARD_RSSI_ANA_PIN 12
 
 # ================= DMA =================
-DMA_PRIORITY TIM2* TIM3*
+DMA_PRIORITY TIM1* TIM2* TIM3* TIM9*
